@@ -18,7 +18,7 @@ import java.util.Map;
  * @author Rico Yu ricoyu520@gmail.com
  * @version 1.0
  */
-public class TwoSum {
+public class TwoSum_1 {
 	
 	public int[] twoSum(int[] nums, int target) {
 		int[] result = new int[2];
