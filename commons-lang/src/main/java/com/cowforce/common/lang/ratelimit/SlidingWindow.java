@@ -83,8 +83,10 @@ public class SlidingWindow implements RateLimiter {
 					sb.append(slot).append("-");
 				}
 				sb.deleteCharAt(sb.length()-1);
-				log.debug("slots现在的结构: {}", sb.toString());
-				log.debug("counter现在的计数: {}", counter.get());
+				if (log.isDebugEnabled()) {
+					log.debug("slots现在的结构: {}", sb.toString());
+					log.debug("counter现在的计数: {}", counter.get());
+				}
 			}
 		}, 0, subWindowMillis, TimeUnit.MILLISECONDS);
 	}
